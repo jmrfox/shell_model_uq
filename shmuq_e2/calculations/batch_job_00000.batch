@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -n 1           #number of tasks
+#SBATCH -t 60                     #walltime in minutes
+#SBATCH -A uq40vbb                     #account
+#SBATCH -e myerrors_usdb.txt             #stderr
+#SBATCH -o myoutputs_usdb.txt             #stdout
+#SBATCH -J usdb_m1                    #name of job
+#SBATCH -p pbatch                   #queue to use
+### Shell scripting
+date; hostname
+echo -n 'JobID is '; echo $LSB_JOBID
+conda activate uq
+export OMP_NUM_THREADS=8
+python compute_M1_pnMEs_v2.py -i sd_M1_processed.csv -o sd_M1_usdb.csv
+date;
+echo 'Done'
