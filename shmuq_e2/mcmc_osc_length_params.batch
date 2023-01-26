@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -J mcmc_osc_length_params
+#SBATCH -t 6:00:00
+#SBATCH -p pbatch
+#SBATCH -A abinitio
+#SBATCH -o batch_output_osc_length_params.txt
+#SBATCH -e batch_errors_osc_length_params.txt
+
+source activate uq
+python shmuq_e2_mcmc.py -v osc_length_params  

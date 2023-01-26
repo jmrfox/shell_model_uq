@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -J mcmc_eff_charges
+#SBATCH -t 6:00:00
+#SBATCH -p pbatch
+#SBATCH -A abinitio
+#SBATCH -o batch_output_eff_charges.txt
+#SBATCH -e batch_errors_eff_charges.txt
+
+source activate uq
+python shmuq_e2_mcmc.py -v eff_charges  
