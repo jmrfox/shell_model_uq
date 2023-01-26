@@ -1,0 +1,12 @@
+#!/bin/bash
+##### These lines are for Slurm
+#SBATCH -N 1
+#SBATCH -J mcmc_fix_sis
+#SBATCH -t 300
+#SBATCH -p pbatch
+#SBATCH -A abinitio
+#SBATCH -o batch_output_fixed_sis.txt
+#SBATCH -e batch_errors_fixed_sis.txt
+
+source activate uq
+python shmuq_m1_mcmc.py -f sis

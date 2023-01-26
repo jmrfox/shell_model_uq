@@ -1,0 +1,12 @@
+#!/bin/bash
+##### These lines are for Slurm
+#SBATCH -N 1
+#SBATCH -J mcmc_v5.5
+#SBATCH -t 6:00:00
+#SBATCH -p pbatch
+#SBATCH -A abinitio
+#SBATCH -o batch_output_v5.5.txt
+#SBATCH -e batch_errors_v5.5.txt
+
+source activate uq
+python shmuq_m1_mcmc_v5.5.py  
