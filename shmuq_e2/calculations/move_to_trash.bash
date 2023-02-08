@@ -1,0 +1,10 @@
+mv *.lcoef ./trash
+mv *.res ./trash
+mv *.ovlp ./trash
+mv *.mstr ./trash
+mv in.* ./trash
+mv *.wfn ./trash
+mv *.log ./trash
+mv *.bigstick ./trash
+mv fort.* ./trash
+mv ham.dat ./trash
